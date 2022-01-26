@@ -81,9 +81,9 @@ http.createServer(function (req, res) {
 // the second is the call back function
 // if no file is found the function gives an error
 // if the file is successfully found, the content of the file are contained in pgres
-		fs.readFile("index.html", function (err, pgres) {
+		fs.readFile("head.html", function (err, pgres) {
 			if (err)
-				res.write("INDEX.HTML NOT FOUND");
+				res.write("HEAD.HTML NOT FOUND");
 			else {
 				// The following 3 lines
 				// are responsible for sending the html file
@@ -94,10 +94,10 @@ http.createServer(function (req, res) {
 			}
 		});
 	}
-	else if (url === "/music") {
-		fs.readFile("music.html", function (err, pgres) {
+	else if (url === "/tail") {
+		fs.readFile("tail.html", function (err, pgres) {
 			if (err)
-				res.write("MUSIC.HTML NOT FOUND");
+				res.write("TAIL.HTML NOT FOUND");
 			else {
 				res.writeHead(200, { 'Content-Type': 'text/html' });
 				res.write(pgres);
