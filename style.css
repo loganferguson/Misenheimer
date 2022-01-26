@@ -1,0 +1,350 @@
+
+@font-face {
+    font-family: w95;
+    src: url(/font/W95FA/w95fa.woff);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color:#64c6ff;
+}
+
+/*-----------------------------Navigation---------------------------*/
+.nav-container {
+    width: 100%;
+    padding: 0;
+    margin-top: 5px;
+    border: 0;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0;
+    margin:0;
+    background-image: linear-gradient(60deg, #ff0081, #c3c3c3, #048383, #c3c3c3);
+    opacity: 1;
+    border-top: 4px solid #fdffff;
+    border-left: 4px solid #fdffff;
+    border-bottom: 4px solid #000000;
+    border-right: 4px solid #000000;
+} 
+
+/* Home page icon styles */
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 70px;
+    padding: 0;
+    margin: 0;
+}
+.nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: none;
+    width: 90px;
+    padding: 0;
+    transition: 0.6s ease;
+}
+
+.nav-icon:hover {
+    transition: 0.6s ease;
+    background-color: #048383;
+}
+
+.world-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 25px;
+    height: 100%;
+}
+.world-icon {
+    height: 40px;
+    padding: 0;
+    transition: 0.5s ease;
+}
+.world-icon:hover {  
+    transform: rotate(5deg);
+    transition: 0.5s ease;
+}
+
+/* Navigation Menu (excluding home page icon) */
+
+.nav-item-mobile {
+    display: none;
+}
+
+.nav-menu-mobile {
+    display: none;
+}
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 70px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.hamburger {
+    display: none;
+    margin-left: auto;
+    height: 70px;
+    width: 90px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.user-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    transition: 0.5s ease;
+}
+.user-icon:hover {
+    transform:rotate(5deg);
+    transition: 0.5s ease;
+}
+
+.hamburger:focus {
+    outline:none;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 120px;
+    padding: 0;
+    transition: 0.6s ease;
+}
+
+.nav-item:hover, .nav-item:focus {
+    transition: 0.6s ease;
+    background-color: #048383;
+}
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: inherit;
+    font-family: w95, sans-serif;
+    font-size: 26px;
+    color: #000000;
+    text-shadow: 2px 0px #fdffff;
+    text-decoration: none;
+}
+
+.speaker-icon {
+    padding-right: 3px;
+    height: 20px;
+}
+
+.about-icon {
+    padding-right: 3px;
+    height: 23px;
+}
+
+/*----------------------------------Social Media----------------------------------------*/
+.social-block {
+    display: flex;
+    margin-left: auto;
+    padding: 0px 20px;
+    list-style: none;
+}
+
+.social-block-mobile {
+    display: none;
+}
+
+.social-item {
+    display: flex;
+    height: 100%;
+    padding: 0px 20px;
+}
+.social-icon {
+    display: flex;
+    padding: 2px 7px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #fdffff;
+    text-shadow: 2px 0px #000000;
+    transition: .3s ease;
+}
+
+.social-icon:hover, .social-icon:focus {
+    font-size: 32px;
+    transition: .3s ease;
+}
+
+main {
+    height:100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: auto;
+    cursor: default;
+    font-family:w95, sans-serif;
+    font-size: 80px;
+    text-decoration: underline;
+    text-shadow: 2px 0px #fdffff;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    font-family:w95, sans-serif;
+}
+/*----- Page Transition ------ */
+
+.transition-fade {
+    transition: 0.6s;
+    opacity: 1;
+}
+
+html.is-animating .transition-fade {
+    opacity: 0;
+}
+
+@media screen and (max-width: 750px){
+
+    h1 {
+        font-size: 60px;
+        transition: .3s ease;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        transition: 0.5s ease;
+    }
+
+    .nav-item {
+        display: none;
+        transition: 0.5s ease;
+    }
+    .nav-menu-mobile {
+        background-image: linear-gradient(15deg, #c3c3c3, #010081, #c3c3c3);
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: center;
+        align-items: center;
+        list-style-type: none;
+        flex-direction: column;
+        position: absolute;
+        padding: 0;
+        opacity: 1;
+        z-index: 1;
+        margin: 0;
+        left: 0;
+        right: 0;
+        transition: 0.5s ease;
+    }
+
+    .nav-item-mobile {
+        display: flex;
+        height: 80px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .nav-link-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: inherit;
+        font-family: w95, sans-serif;
+        font-size: 25px;
+        color: #fdffff;
+        text-shadow: 2px 0px #000000;
+        text-decoration: none;
+    }
+    .nav-item-mobile:hover {
+        background-color: #048383;
+    }
+
+    .hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hamburger:hover {
+        background-color: #048383;
+    }
+
+    /*--------------------SOCIAL MEDIA---------------*/
+
+
+    .social-block {
+        display: none;
+        transition: 0.3s ease;
+    }
+    .social-block-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        width: 100%;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        background-image: url("./images/Red.jpg");
+        background-size:90%;
+        background-repeat:round;
+        transition: 0.5s ease;
+    }
+    .social-item-mobile {
+        display: flex;
+        height: 100%;
+        padding: 0px 10px;
+    }
+
+    .social-link-mobile {
+        padding: 10px;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    h1 {
+        font-size: 40px;
+        transition: .3s ease;
+    }
+
+    .world-icon {
+        height: 35px;
+    }
+    .user-icon {
+        height: 35px;
+    }
+
+    .social-icon {
+        font-size: 23px;
+    }
+}
