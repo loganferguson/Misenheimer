@@ -23,5 +23,6 @@
   "homepage": "https://github.com/loganferguson/Misenheimer#readme",
   "dependencies": {
     "express": "^4.17.2"
-  }
+  },
+  "devDependencies": {}
 }
