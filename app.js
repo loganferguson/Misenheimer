@@ -1,3 +1,4 @@
+import Swup from 'swup';
 const swup = new Swup();
 
 const hamburger = document.getElementById('hamburger');

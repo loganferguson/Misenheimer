@@ -2,7 +2,6 @@
   "dependencies": {
     "swup": "^2.0.14"
   },
-
   "scripts": {
     "start": "node app.js"
   }
