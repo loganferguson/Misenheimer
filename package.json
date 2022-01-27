@@ -1,5 +1,25 @@
 {
   "scripts": {
     "start": "node app.js"
-  }
+  },
+  "name": "misenheimer",
+  "version": "1.0.0",
+  "description": "Misenheimer website by Misenheimer",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loganferguson/Misenheimer.git"
+  },
+  "keywords": [
+    "Misenheimer",
+    "music",
+    "website"
+  ],
+  "author": "Misenheimer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loganferguson/Misenheimer/issues"
+  },
+  "homepage": "https://github.com/loganferguson/Misenheimer#readme"
 }
