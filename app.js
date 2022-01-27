@@ -1,5 +1,4 @@
 const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
 const navHome = document.getElementById('nav-home');
 const navMenuMobile = document.getElementById('nav-menu-mobile');
 const navItemMobile = document.getElementById('nav-item-mobile');
