@@ -1,42 +1,15 @@
-var http = require('http');
-var fs = require('fs'); // to get data from html file
-var port = process.env.PORT || 3000;
+// create an express app
+const express = require("express")
+const app = express()
 
-http.createServer(function (req, res) {
-	res.writeHead(200, { 'Content-Type': 'text/html' });
+// use the express-static middleware
+app.use(express.static("public"))
 
-	// req.url stores the path in the url
-	var url = req.url;
-	if (url === "/") {
-// fs.readFile looks for the HTML file
-// the first parameter is the path to the HTML page
-// the second is the call back function
-// if no file is found the function gives an error
-// if the file is successfully found, the content of the file are contained in pgres
-		fs.readFile("index.html", function (err, pgres) {
-			if (err)
-				res.write("INDEX.HTML NOT FOUND");
-			else {
-				// The following 3 lines
-				// are responsible for sending the html file
-				// and ends the response process
-				res.writeHead(200, { 'Content-Type': 'text/html' });
-				res.write(pgres);
-				res.end();
-			}
-		});
-	}
-	else if (url === "/music") {
-		fs.readFile("music.html", function (err, pgres) {
-			if (err)
-				res.write("MUSIC.HTML NOT FOUND");
-			else {
-				res.writeHead(200, { 'Content-Type': 'text/html' });
-				res.write(pgres);
-				res.end();
-			}
-		});
-	}
+// define the first route
+app.get("/", function (req, res) {
+  res.send("<h1>Hello World!</h1>")
+})
 
-}).listen(port);
-
+// start the server listening for requests
+app.listen(process.env.PORT || 3000, 
+	() => console.log("Server is running..."));
