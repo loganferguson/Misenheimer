@@ -1,28 +1,34 @@
 
 @font-face {
     font-family: w95;
-    src: url(/font/W95FA/w95fa.woff);
+    src: url(/public/font/W95FA/w95fa.woff);
+}
+
+@font-face {
+    font-family: scoreboard;
+    src: url(/public/font/Scoreboard/scoreboard.ttf);
 }
 
 html, body {
-    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
     height: 100%;
     width: 100%;
 }
 
 body {
-    background-image:linear-gradient(to bottom, #048383, #fdffff);
+    background-image:linear-gradient(to bottom, #666666, #88aaab);
+    background-image: url(/public/images/static.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat:round;
 }
 
 /*-----------------------------Navigation---------------------------*/
 .nav-container {
-    width: 100%;
+    width: auto;
     padding: 0;
-    margin-top: 5px;
-    border: 0;
+    margin: 0px;
 }
 
 nav {
@@ -31,12 +37,12 @@ nav {
     align-items: center;
     padding: 0;
     margin:0;
-    background-image: linear-gradient(60deg, #ff0081, #c3c3c3, #048383, #c3c3c3);
+    background-color: #000000;
     opacity: 1;
-    border-top: 4px solid #fdffff;
-    border-left: 4px solid #fdffff;
-    border-bottom: 4px solid #000000;
-    border-right: 4px solid #000000;
+    border: 10px solid;
+    border-width: 5px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to bottom, #67cbdb, #3160ed);
 } 
 
 /* Home page icon styles */
@@ -54,14 +60,14 @@ nav {
     justify-content: center;
     height: 100%;
     border: none;
-    width: 90px;
+    width: 70px;
     padding: 0;
-    transition: 0.6s ease;
+    transition: 0.3s ease;
 }
 
 .nav-icon:hover {
-    transition: 0.6s ease;
-    background-color: #048383;
+    transition: 0.3s ease;
+    background-color: #5045e5;
 }
 
 .world-link {
@@ -104,11 +110,15 @@ nav {
     display: none;
     margin-left: auto;
     height: 70px;
-    width: 90px;
+    width: 70px;
     background-color: transparent;
     border: none;
     font-size: 30px;
     cursor: pointer;
+}
+
+.hamburger:focus {
+    outline:none;
 }
 
 .user-icon {
@@ -123,9 +133,7 @@ nav {
     transition: 0.5s ease;
 }
 
-.hamburger:focus {
-    outline:none;
-}
+
 
 .nav-item {
     display: flex;
@@ -134,12 +142,12 @@ nav {
     height: 100%;
     width: 120px;
     padding: 0;
-    transition: 0.6s ease;
+    transition: 0.3s ease;
 }
 
 .nav-item:hover, .nav-item:focus {
-    transition: 0.6s ease;
-    background-color: #048383;
+    transition: 0.3s ease;
+    background-color: #5045e5;
 }
 .nav-link {
     display: flex;
@@ -148,9 +156,9 @@ nav {
     height: 100%;
     width: inherit;
     font-family: w95, sans-serif;
-    font-size: 26px;
-    color: #000000;
-    text-shadow: 2px 0px #fdffff;
+    font-size: 30px;
+    color: #fdffff;
+    text-shadow: 2px 0px #ee4444;
     text-decoration: none;
 }
 
@@ -159,7 +167,7 @@ nav {
     height: 20px;
 }
 
-.about-icon {
+.tour-icon {
     padding-right: 3px;
     height: 23px;
 }
@@ -193,7 +201,7 @@ nav {
 }
 
 .social-icon:hover, .social-icon:focus {
-    font-size: 32px;
+    color: #ee4444;
     transition: .3s ease;
 }
 
@@ -211,9 +219,11 @@ h1 {
     margin: auto;
     cursor: default;
     font-family:w95, sans-serif;
-    font-size: 80px;
+    font-size: 120px;
     text-decoration: underline;
-    text-shadow: 2px 0px #fdffff;
+    text-shadow: 2px 2px #5144d2;
+    color: #ea4946;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 footer {
@@ -226,27 +236,47 @@ footer {
 
 .card-container {
     display: grid;
-    margin: 50px 20px 50px 20px;
-    max-width: auto;
+    margin: auto;
+    max-width: 1000px;
     grid-template-columns: auto auto auto;
     grid-auto-rows: auto auto auto;
     background-color:#c3c3c3;
-    border-top: 10px solid #fdffff;
-    border-right: 10px solid #000000;
-    border-bottom: 10px solid #000000;
-    border-left: 10px solid #fdffff;
+    border-top: 5px solid #fdffff;
+    border-right: 5px solid #000000;
+    border-bottom: 5px solid #000000;
+    border-left: 5px solid #fdffff;
 }
 .card-header {
-    display: flex;
+    display: block;
     justify-content: center;
     margin: 5px;
-    padding: 3px;
     grid-area: 1 / 1 / span 1 / span 3;
-    background-color: #010081;
-    font-family: w95, sans-serif;
-    font-size: 60px;
-    color: #fdffff;
+    background-color: #000000;
+    overflow: hidden;
+    white-space:nowrap;
 }
+
+.hmove {
+    display: flex;
+}
+
+.hitem {
+    flex-shrink: 1;
+    margin: auto;
+    padding-left: 4px;
+    text-align: center;
+    font-family: scoreboard, sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    color: yellow;
+  }
+
+  @keyframes tickerh {
+    0% { transform: translate3d(100%, 0, 0); }
+    100% { transform: translate3d(-600%, 0, 0); }
+  }
+  .hmove { animation: tickerh linear 30s infinite; }
+  .hmove:hover { animation-play-state: paused; }
 
 .card1 {
     grid-area: 2 / 1 / span 1 / span 1;
@@ -310,6 +340,12 @@ footer {
 
 @media screen and (max-width: 750px){
 
+    @keyframes tickerh {
+        0% { transform: translate3d(100%, 0, 0); }
+        100% { transform: translate3d(-1000%, 0, 0); }
+      }
+      .hmove { animation: tickerh linear 40s infinite; }
+      .hmove:hover { animation-play-state: paused; }
     /*-----------CARD MOBILE------------*/
 
     .card-container {
@@ -326,7 +362,6 @@ footer {
         padding: 5px;
         text-align: center;
         grid-area: 1 / 1 / span 1 / span 3;
-        background-color: #010081;
         font-family: w95, sans-serif;
         font-size: 40px;
         color: #fdffff;
@@ -358,7 +393,7 @@ footer {
     }
 
     h1 {
-        font-size: 60px;
+        font-size: 80px;
         transition: .3s ease;
     }
     .nav-menu {
@@ -372,7 +407,7 @@ footer {
         transition: 0.5s ease;
     }
     .nav-menu-mobile {
-        background-image: linear-gradient(15deg, #c3c3c3, #010081, #c3c3c3);
+        background-image: linear-gradient(15deg, #fdffff, #5045e5, #000000);
         display: flex;
         flex-wrap: wrap;
         justify-items: center;
@@ -409,7 +444,7 @@ footer {
         text-decoration: none;
     }
     .nav-item-mobile:hover {
-        background-color: #048383;
+        background-color: #5045e5;
     }
 
     .hamburger {
@@ -419,7 +454,7 @@ footer {
     }
 
     .hamburger:hover {
-        background-color: #048383;
+        background-color:#5045e5;
     }
 
     /*--------------------SOCIAL MEDIA---------------*/
@@ -438,9 +473,7 @@ footer {
         height: 50px;
         margin: 0;
         padding: 0;
-        background-image: url("./images/Red.jpg");
-        background-size:90%;
-        background-repeat:round;
+    background-color: #5045e5;
         transition: 0.5s ease;
     }
     .social-item-mobile {
@@ -461,7 +494,7 @@ footer {
         font-size: 25px;
     }
     h1 {
-        font-size: 40px;
+        font-size: 60px;
         transition: .3s ease;
     }
 
@@ -474,5 +507,28 @@ footer {
 
     .social-icon {
         font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 360px){
+
+    .card-header {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+        transition: .3s ease;
+    }
+
+    .world-icon {
+        height: 30px;
+    }
+    .user-icon {
+        height: 30px;
+    }
+
+    .social-icon {
+        font-size: 20px;
     }
 }

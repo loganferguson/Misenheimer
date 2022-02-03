@@ -4,7 +4,7 @@ const navMenuMobile = document.getElementById('nav-menu-mobile');
 const navItemMobile = document.getElementById('nav-item-mobile');
 const navItemMobile2 = document.getElementById('nav-item-mobile2');
 const navMusic = document.getElementById('nav-music');
-const navAbout = document.getElementById('nav-about');
+const navTour = document.getElementById('nav-tour');
 
 hamburger.addEventListener('click', () => {
 
@@ -18,17 +18,22 @@ hamburger.addEventListener('click', () => {
 
 function openNav() {
     navMenuMobile.style.height = "100%";
-    navMenuMobile.style.borderLeft = "4px solid #fdffff";
-    navMenuMobile.style.borderBottom = "4px solid #000000";
-    navMenuMobile.style.borderRight = "4px solid #000000";
+    // navMenuMobile.style.borderLeft = "4px solid #5045e5";
+    // navMenuMobile.style.borderBottom = "4px solid #000000";
+    // navMenuMobile.style.borderRight = "4px solid #000000";
 
-    navItemMobile.style.borderBottom = "4px solid #000000";
-    navItemMobile.style.borderTop = "4px solid #fdffff";
-    navItemMobile.style.borderRight = "4px solid #000000";
+    // navMenuMobile.style.border = "10px solid";
+    // navMenuMobile.style.borderWidth = "5px";
+    // navMenuMobile.style.borderImage = "1";
+    // navMenuMobile.style.borderImageSource = "linear-gradient(to bottom, #67cbdb, #3160ed)";
 
-    navItemMobile2.style.borderBottom = "4px solid #000000";
-    navItemMobile2.style.borderTop = "4px solid #fdffff";
-    navItemMobile2.style.borderRight = "4px solid #000000";
+    navItemMobile.style.borderBottom = "2px solid #000000";
+    // navItemMobile.style.borderTop = "4px solid #5045e5";
+    // navItemMobile.style.borderRight = "2px solid #000000";
+
+    navItemMobile2.style.borderBottom = "2px solid #000000";
+    // navItemMobile2.style.borderTop = "2px solid #5045e5";
+    // navItemMobile2.style.borderRight = "2px solid #000000";
   };
   
 function closeNav() {
@@ -59,6 +64,6 @@ navMusic.addEventListener('click', () => {
     closeNav();
 });
 
-navAbout.addEventListener('click', () => {
+navTour.addEventListener('click', () => {
     closeNav();
 });
