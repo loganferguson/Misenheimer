@@ -214,27 +214,28 @@ main {
 
 @keyframes backgroundColorPalette {
     0% {
-      background: rgba(0,0,0,0.3);
+      background: rgba(0,0,0,0.4);
     }
     25% {
-      background: rgba(44,97,236,0.3);
+      background: rgba(44,97,236,0.4);
     }
     50% {
-      background: rgba(154,100,21,0.3);
+      background: rgba(154,100,21,0.4);
     }
     75% {
-      background: rgba(81, 239, 76, 0.3);
+      background: rgba(81, 239, 76, 0.4);
     }
     100% {
-      background: rgba(81, 54, 136,0.3);
+      background: rgba(81, 54, 136,0.4);
     }
   }
 
 h1 {
     display: flex;
     justify-content: center;
-    padding: 10px;
     margin: auto;
+    padding: 10px;
+    width: 100%;
     cursor: default;
     font-family:w95, sans-serif;
     font-size: 120px;
@@ -260,13 +261,11 @@ footer {
     margin: auto;
     padding-bottom: 10px;
     max-width: 1000px;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: auto auto auto;
-    background-image:linear-gradient(to right,#444444,#656565,#87a9b0, #87a9b0, #656565, #444444);
-    border: 10px solid;
-    border-width: 2px;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to top, #67cbdb, #3160ed);
+    background-image:linear-gradient(to right,#444444,#656565, #87a9b0, #656565, #444444);
+    border: 1px solid #ea4946;
+    border-radius: 15px;
 }
 .card-header {
     display: block;
@@ -303,25 +302,28 @@ footer {
 .card1 {
     grid-area: 2 / 1 / span 1 / span 1;
     display: flex;
+    position: relative;
     justify-content: center;
-    margin: 10px;
+    margin: auto;
     padding: 10px;
 }
 
 .card2 {
     grid-area: 2 / 2 / span 1 / span 1;
     display: flex;
+    position: relative;
     justify-content: center;
-    margin: 10px;
+    margin: auto;
     padding: 10px;
 }
 /*  start row 2 / start column 1 / span 2 rows / span3 columns */
 .card3 {
+    grid-area: 2 / 3 / span 1 / span 1;  
     display: flex;
-    justify-content: center;
-    grid-area: 2 / 3 / span 1 / span 1;
+    position: relative;
+    justify-content: center; 
+    margin: auto;
     padding: 10px;
-    margin: 10px;
 }
 
 .card4 {
@@ -335,22 +337,29 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 2px;
+    opacity: 0.8;
+}
+
+.single-cover:hover {
+    opacity: 1;
 }
 
 .listen-btn {
-    width: 70%;
+    width: 60%;
     height: 100%;
     background-color:#000000;
     font-family: w95, sans-serif;
     font-size: 22px;
+    padding: 5px;
     margin: 0;
-    /* border-top: 3px solid #fdffff;
+    border-top: 3px solid #fdffff;
     border-right: 3px solid #000000;
     border-bottom: 3px solid #000000;
-    border-left: 3px solid #fdffff; */
+    border-left: 3px solid #fdffff;
 }
 
 .listen-btn a {
