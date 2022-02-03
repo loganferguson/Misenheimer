@@ -1,12 +1,12 @@
 
 @font-face {
     font-family: w95;
-    src: url(/public/font/W95FA/w95fa.woff);
+    src: url(/font/W95FA/w95fa.woff);
 }
 
 @font-face {
     font-family: scoreboard;
-    src: url(/public/font/Scoreboard/scoreboard.ttf);
+    src: url(/font/Scoreboard/scoreboard.ttf);
 }
 
 html, body {
@@ -19,7 +19,7 @@ html, body {
 
 body {
     background-image:linear-gradient(to bottom, #666666, #88aaab);
-    background-image: url(/public/images/static.jpg);
+    background-image: url(/images/static.jpg);
     background-size: cover;
     background-repeat:round;
 }
