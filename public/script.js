@@ -18,22 +18,13 @@ hamburger.addEventListener('click', () => {
 
 function openNav() {
     navMenuMobile.style.height = "100%";
-    // navMenuMobile.style.borderLeft = "4px solid #5045e5";
-    // navMenuMobile.style.borderBottom = "4px solid #000000";
-    // navMenuMobile.style.borderRight = "4px solid #000000";
 
-    // navMenuMobile.style.border = "10px solid";
-    // navMenuMobile.style.borderWidth = "5px";
-    // navMenuMobile.style.borderImage = "1";
-    // navMenuMobile.style.borderImageSource = "linear-gradient(to bottom, #67cbdb, #3160ed)";
 
     navItemMobile.style.borderBottom = "2px solid #000000";
-    // navItemMobile.style.borderTop = "4px solid #5045e5";
-    // navItemMobile.style.borderRight = "2px solid #000000";
+
 
     navItemMobile2.style.borderBottom = "2px solid #000000";
-    // navItemMobile2.style.borderTop = "2px solid #5045e5";
-    // navItemMobile2.style.borderRight = "2px solid #000000";
+
   };
   
 function closeNav() {

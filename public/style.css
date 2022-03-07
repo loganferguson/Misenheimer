@@ -254,180 +254,175 @@ footer {
     align-items: center;
     font-family:w95, sans-serif;
 }
-/*----- GRID CARD STYLE ------ */
+/*----- NEWS SECTION (INDEX.HTML)------ */
 
-.card-container {
+.news-container {
     display: grid;
-    margin: auto;
-    padding-bottom: 10px;
-    max-width: 1000px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: auto auto auto;
-    background-image:linear-gradient(to right,#444444,#656565, #87a9b0, #656565, #444444);
-    border: 1px solid #ea4946;
-    border-radius: 15px;
+    margin:30px auto auto auto;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    max-width: 800px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    background-color: white;
+    border-radius: 5px; 
 }
-.card-header {
+
+.news-heading {
+    font-family: w95, sans-serif;
+    font-size: 30px;
+    padding: 10px 0px 5px 20px;
+    margin: 0;
+}
+
+.news-card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    padding: 20px;
+}
+/* grid-area: row start / column start / row span / column span  */
+.news-image {
+    display: flex;
+    justify-content: left;
+    grid-area: 1 / 1 / span 1 / span 1;
+    margin: 0;
+    padding: 0;
+}
+
+.news-image img {
     display: block;
-    justify-content: center;
-    margin: 5px;
-    grid-area: 1 / 1 / span 1 / span 3;
-    background-color: #000000;
-    overflow: hidden;
-    white-space:nowrap;
-}
-
-.hmove {
-    display: flex;
-}
-
-.hitem {
-    flex-shrink: 1;
-    margin: auto;
-    padding-left: 4px;
-    text-align: center;
-    font-family: scoreboard, sans-serif;
-    font-size: 25px;
-    font-weight: 400;
-    color: yellow;
-  }
-
-  @keyframes tickerh {
-    0% { transform: translate3d(100%, 0, 0); }
-    100% { transform: translate3d(-600%, 0, 0); }
-  }
-  .hmove { animation: tickerh linear 30s infinite; }
-  .hmove:hover { animation-play-state: paused; }
-
-.card1 {
-    grid-area: 2 / 1 / span 1 / span 1;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    margin: auto;
-    padding: 10px;
-}
-
-.card2 {
-    grid-area: 2 / 2 / span 1 / span 1;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    margin: auto;
-    padding: 10px;
-}
-/*  start row 2 / start column 1 / span 2 rows / span3 columns */
-.card3 {
-    grid-area: 2 / 3 / span 1 / span 1;  
-    display: flex;
-    position: relative;
-    justify-content: center; 
-    margin: auto;
-    padding: 10px;
-}
-
-.card4 {
-    display: flex;
-    justify-content: center;
-    grid-area: 3 / 2 / span 1  / span 1;
-    margin: 5px;
-}
-
-.single-cover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    width: 100%;
+    max-width: 200px;
     height: auto;
     border-radius: 2px;
+    margin: 0;
+}
+
+.news-body {
+    display: flex;
+    justify-content: left;
+    grid-area: 1 / 2 / span 1 / span 1;
+    padding: 0px 0px 0px 10px;
+    margin: 0;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-item {
+    text-decoration: none;
+    font-size: 15px;
+    font-family:w95, sans-serif;
+    color: #9e9e9e;
+    padding-bottom: 10px;
+}
+.news-item.headline {
+    font-size: 25px;
+    color: #000000;
+}
+.news-item a {
+    text-decoration: none;
+    color:#8b8b8b;
+}
+
+
+/*---------------MUSIC SECTION---------------*/
+
+.music-card-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 5fr;
+    margin: 30px auto auto auto;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.container-heading {
+    grid-area: 1 / 1 / span 1 / span 1;
+    font-family: w95, sans-serif;
+    font-size: 30px;
+    padding: 10px 0px 5px 15px;
+    margin: 0;
+}
+
+/* row start / column start / row span / column span  */
+.music-card {
+    grid-area: 2 / 1 / span 1 / span 1;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    max-width: 300px;
+    padding: 10px;
+}
+
+.cover-art {
+    display: flex;
+    justify-content: left;
+    grid-area: 1 / 1 / span 1 / span 1;
+    padding: 5px 5px 0px 5px;
+    margin: 0;
+}
+
+.cover-art img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 2px;
+}
+
+.meta-info {
+    display: flex;
+    justify-content: left;
+    grid-area: 2 / 1 / span 1 / span 1;
+    padding: 5px;
+    margin: 0;
+}
+.meta-list {
+    list-style:none;
+    font-family: w95, sans-serif;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+.meta-list .title {
+    font-size: 15px;
+    font-weight:bold;
+}
+
+.buy-link {
+    text-decoration: none;
+    color: #8b8b8b;
+}
+
+.music-image-container:hover .fa-spotify{display:flex; justify-content: center; align-items: center}
+.music-image-container:hover .music-ep-cover{opacity: 0.8}
+.music-ep-cover:hover {
     opacity: 0.8;
 }
 
-.single-cover:hover {
-    opacity: 1;
-}
-
-.listen-btn {
-    width: 60%;
-    height: 100%;
-    background-color:#000000;
-    font-family: w95, sans-serif;
-    font-size: 22px;
-    padding: 5px;
-    margin: 0;
-    border-top: 3px solid #fdffff;
-    border-right: 3px solid #000000;
-    border-bottom: 3px solid #000000;
-    border-left: 3px solid #fdffff;
-}
-
-.listen-btn a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: underline;
-    color:#fdffff;
-    height: 100%;
-    margin: auto;
-    text-shadow: 2px 0px #ea4946;
-}
-
-
 @media screen and (max-width: 750px){
 
-    @keyframes tickerh {
-        0% { transform: translate3d(100%, 0, 0); }
-        100% { transform: translate3d(-2200%, 0, 0); }
-      }
-      .hmove { animation: tickerh linear 40s infinite; }
-      .hmove:hover { animation-play-state: paused; }
-    /*-----------CARD MOBILE------------*/
-
-    .card-container {
-        display: grid;
-        contain: content;
-        margin: 40px auto auto auto;
-        max-width: 70%;
-        grid-template-columns: auto;
-        grid-auto-rows: auto auto auto auto;
-    }
-
-    .card-header {
-        margin: 3px;
-        padding: 5px;
-        text-align: center;
-        grid-area: 1 / 1 / span 1 / span 3;
-        font-family: w95, sans-serif;
-        font-size: 40px;
-        color: #fdffff;
-    }
-
-    .card1 {
-        grid-area: 2 / 1 / span 1 / span 3;
-        margin: 10px;
-        padding: 10px;
-    }
     
-    .card2 {
-        grid-area: 3 / 1 / span 1 / span 3;
-        margin: 10px;
-        padding: 10px;
-    }
-    
-    .card3 {
-        grid-area: 4 / 1 / span 1 / span 3;
-        margin: 10px;
-        padding: 10px;
+    /*-----------NEWS SECTION (BELOW 750px)------------*/
+
+    .news-image img {
+        max-width: 150px;
     }
 
-    .card4 {
-        display: flex;
-        justify-content: center;
-        grid-area: 5 / 2 / span 1  / span 1;
-        margin: 5px;
+    .news-item {
+        font-size: 12px;
+    }
+    .news-item.headline {
+        font-size: 20px;
     }
 
+    /*-----------NAV SECTION (BELOW 750px)-------------*/
     h1 {
         font-size: 80px;
         transition: .3s ease;
@@ -509,7 +504,7 @@ footer {
         height: 50px;
         margin: 0;
         padding: 0;
-    background-color: #5045e5;
+        background-color: #5045e5;
         transition: 0.5s ease;
     }
     .social-item-mobile {
@@ -522,16 +517,46 @@ footer {
         padding: 10px;
     }
 
+    /*-------------- CARD --------------*/
+
+    .listen-btn {
+        font-size: 20px;
+    }
+
 }
 
 @media screen and (max-width: 500px){
 
-    .card-container {
-        max-width: 80%;
+    /*-------------NEWS SECTION (UNDER 500px)-----------*/
+
+    .news-card {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        padding: 15px;
     }
-    .card-header {
-        font-size: 25px;
+
+    .news-image {
+        justify-content: center;
+        grid-area: 1 / 1 / span 1 / span 1;
     }
+
+    .news-image img {
+        max-width: 100%;
+    }
+    .news-body {
+        justify-content: center;
+        grid-area: 2 / 1 / span 1 / span 1;
+        padding: 10px 0px 0px 0px;
+    }
+
+    /*-----------MUSIC SECTION (UNDER 500px)-------------*/
+
+    .music-card-section {
+        display: flex;
+        justify-content: center;
+    }
+
     h1 {
         font-size: 60px;
         transition: .3s ease;
@@ -547,14 +572,18 @@ footer {
     .social-icon {
         font-size: 23px;
     }
+
+    .index-image-container .fa-spotify {
+        font-size: 80px;
+    }
 }
 
 @media screen and (max-width: 360px){
 
-    .card-container {
+    .index-card-container {
         max-width: 95%;
     }
-    .card-header {
+    .index-card-header {
         font-size: 20px;
     }
 
@@ -572,5 +601,13 @@ footer {
 
     .social-icon {
         font-size: 20px;
+    }
+
+    .index-image-container .fa-spotify {
+        font-size: 50px;
+    }
+
+    .listen-btn {
+        font-size: 14px;
     }
 }
