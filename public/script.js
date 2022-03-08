@@ -1,3 +1,5 @@
+
+const swup = new Swup();
 const hamburger = document.getElementById('hamburger');
 const navHome = document.getElementById('nav-home');
 const navMenuMobile = document.getElementById('nav-menu-mobile');
