@@ -141,7 +141,7 @@ nav {
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 120px;
+    width: 130px;
     padding: 0;
     transition: 0.3s ease;
 }
@@ -157,7 +157,7 @@ nav {
     height: 100%;
     width: inherit;
     font-family: w95, sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     color: #fdffff;
     text-shadow: 2px 0px #ee4444;
     text-decoration: none;
@@ -171,6 +171,11 @@ nav {
 .tour-icon {
     padding-right: 3px;
     height: 23px;
+}
+
+.contact-icon {
+    padding-right: 3px;
+    height: 20px;
 }
 
 /*----------------------------------Social Media----------------------------------------*/
@@ -195,7 +200,7 @@ nav {
     padding: 2px 7px;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-size: 23px;
     color: #fdffff;
     text-shadow: 2px 0px #000000;
     transition: .3s ease;
@@ -265,7 +270,7 @@ footer {
     max-width: 800px;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    background-color: white;
+    background-color: #fdffff;
     border-radius: 5px; 
 }
 
@@ -340,7 +345,7 @@ footer {
     padding-bottom: 5px;
     padding-top: 5px;
     max-width: 800px;
-    background-color: white;
+    background-color: #fdffff;
     border-radius: 5px;
 }
 
@@ -405,6 +410,96 @@ footer {
 .music-image-container:hover .music-ep-cover{opacity: 0.8}
 .music-ep-cover:hover {
     opacity: 0.8;
+}
+
+/*---------------CONTACT SECTION------------------*/
+
+.contact-container{
+    background-color:#fdffff;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.contact-container h3 {
+    width: 100%;
+    margin: auto;
+    font-family: w95, sans-serif;
+    font-size: 30px;
+    padding: 10px 0px 5px 15px;
+    margin: 0;
+}
+
+.form-container {
+    display: flex;
+    background-color:#5045e5;
+    max-width: 800px;
+    width: 90%;
+    height: auto;
+    margin: 10px auto 15px auto;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 90%;
+    grid-template-rows: auto auto auto auto;
+    width: 90%;
+    margin: 20px 0px;
+}
+
+.contact-name{
+    grid-area: 1 / 1 / span 1 / span 1;
+    justify-self: center;
+}
+.contact-email{
+    grid-area: 2 / 1 / span 1 / span 1;
+    justify-self: center;
+}
+form input {
+    font-family: w95, sans-serif;
+    font-size: 16px;
+    padding: 5px;
+    margin-bottom: 15px;
+    max-width: 500px;
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 35px;
+}
+
+form textarea {
+    grid-area: 3 / 1 / span 1 / span 1;
+    font-family: w95, sans-serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+    max-width: 500px;
+    height: 200px;
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    border: none;
+    overflow-y:auto;
+    justify-self: center;
+}
+
+form button {
+    grid-area: 4 / 1 / span 1 / span 1;
+    font-family:w95, sans-serif;
+    font-size: 16px;
+    width: 60%;
+    margin: auto;
+    height: 35px;
+    justify-self: center;
 }
 
 @media screen and (max-width: 750px){
@@ -585,6 +680,27 @@ footer {
 
     .index-image-container .fa-spotify {
         font-size: 80px;
+    }
+
+    /*----------CONTACT SECTION (UNDER 500px)-----------*/
+
+    .contact-container{
+        width: 100%;
+    }
+    .form-container {
+        width: 95%;
+    }
+    form input {
+        height: 25px;
+        font-size: 12px;
+    }
+
+    form textarea {
+        font-size: 12px;
+    }
+
+    form button {
+        font-size: 12px;
     }
 }
 

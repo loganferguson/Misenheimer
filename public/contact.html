@@ -8,7 +8,7 @@
     <link rel="icon" href="/images/world.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     
-    <title>Misenheimer | Home</title>
+    <title>Misenheimer | Contact</title>
 </head>
 <body>
 
@@ -36,9 +36,13 @@
             
 <!-------------------DESKTOP NAVIGATION--------------------------->
                 <ul class="nav-menu" id="nav-menu">  
-                    <li class="nav-item"><a href='/music.html' class="nav-link"><img class="speaker-icon" src="/images/speaker.png" alt="speaker-icon">MUSIC</a></li>               
+
+                    <li class="nav-item"><a href='/music.html' class="nav-link"><img class="speaker-icon" src="/images/speaker.png" alt="speaker-icon">MUSIC</a></li>  
+
                     <li class="nav-item"><a href='/tour.html' class="nav-link">SHOWS</a></li>   
+
                     <li class="nav-item"><a href='/contact.html' class="nav-link">CONTACT</a></li>    
+
                 </ul>
 
 <!-------------------DESKTOP SOCIAL MEDIA-------------------------->
@@ -52,11 +56,11 @@
 
 <!-------------------MOBILE NAVIGATION---------------------------->
 
-<ul id="nav-menu-mobile" style="height:0%; border: none;" class="nav-menu-mobile">
-    <li id="nav-item-mobile" class="nav-item-mobile" style="border:none;"><a href='/music.html' id="nav-music" class="nav-link-mobile">MUSIC</a></li>
-    <li id="nav-item-mobile2" class="nav-item-mobile" style="border:none;"><a href='/tour.html' id="nav-tour" class="nav-link-mobile">SHOWS</a></li>
-    <li id="nav-item-mobile3" class="nav-item-mobile" style="border:none;"><a href='/contact.html' id="nav-contact" class="nav-link-mobile">CONTACT</a></li>
-</ul>
+            <ul id="nav-menu-mobile" style="height:0%; border: none;" class="nav-menu-mobile">
+                <li id="nav-item-mobile" class="nav-item-mobile" style="border:none;"><a href='/music.html' id="nav-music" class="nav-link-mobile">MUSIC</a></li>
+                <li id="nav-item-mobile2" class="nav-item-mobile" style="border:none;"><a href='/tour.html' id="nav-tour" class="nav-link-mobile">SHOWS</a></li>
+                <li id="nav-item-mobile3" class="nav-item-mobile" style="border:none;"><a href='/contact.html' id="nav-contact" class="nav-link-mobile">CONTACT</a></li>
+            </ul>
             
         
          
@@ -68,28 +72,22 @@
         
         <h1>MISENHEIMER.</h1> 
 
-        
-        <div class="news-container">
-            <h3 class="news-heading">Latest News</h3>
+        <div class="contact-container">
+            <h3>Contact</h3>
 
-            <div class="news-card">
-
-                <div class="news-image">
-                    <img src="/images/Scream1000.jpg" alt="kid in halloween mask"> 
-                </div>   
-
-                <div class="news-body">
-                    <ul class="news-list">
-                        <li class="news-item">February 23, 2022</li>
-                        <li class="news-item headline">Misenheimer announces release: "Here's One" - EP (2022).</li>
-                        <li class="news-item"><a href="#">Read More &#8594;</a></li>
-                    </ul>
-                </div>    
-
+            <div class="form-container">
+                <form action="https://formsubmit.co/lferg1292@yahoo.com" method="POST">
+                    <input class="contact-name" type="text" name="name" placeholder="NAME" required>
+                    <input class="contact-email" type="email" name="email" placeholder="EMAIL" required>
+                    <textarea type="text" name="message" placeholder="MESSAGE" required></textarea>
+                    <button type="submit">SEND</button>
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://www.misenheimer.art">
+               </form>
             </div>
-
+            
         </div>
-
+        
 
     </main>
 

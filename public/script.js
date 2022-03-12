@@ -3,6 +3,7 @@ const navHome = document.getElementById('nav-home');
 const navMenuMobile = document.getElementById('nav-menu-mobile');
 const navItemMobile = document.getElementById('nav-item-mobile');
 const navItemMobile2 = document.getElementById('nav-item-mobile2');
+const navItemMobile3 = document.getElementById('nav-item-mobile3');
 const navMusic = document.getElementById('nav-music');
 const navTour = document.getElementById('nav-tour');
 
@@ -18,12 +19,9 @@ hamburger.addEventListener('click', () => {
 
 function openNav() {
     navMenuMobile.style.height = "100%";
-
-
     navItemMobile.style.borderBottom = "2px solid #000000";
-
-
     navItemMobile2.style.borderBottom = "2px solid #000000";
+    navItemMobile3.style.borderBottom = "2px solid #000000";
 
   };
   
