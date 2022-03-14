@@ -418,11 +418,11 @@ footer {
     background-color:#fdffff;
     display: flex;
     flex-direction: column;
-    max-width: 1000px;
+    max-width: 800px;
     width: 80%;
     align-items: center;
     justify-content: center;
-    margin: auto;
+    margin: 30px auto auto auto;
     border-radius: 5px;
 }
 
@@ -438,7 +438,7 @@ footer {
 .form-container {
     display: flex;
     background-color:#5045e5;
-    max-width: 800px;
+    max-width: 600px;
     width: 90%;
     height: auto;
     margin: 10px auto 15px auto;
@@ -496,6 +496,7 @@ form button {
     grid-area: 4 / 1 / span 1 / span 1;
     font-family:w95, sans-serif;
     font-size: 16px;
+    max-width: 120px;
     width: 60%;
     margin: auto;
     height: 35px;
